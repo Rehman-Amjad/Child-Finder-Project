@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "949916560478",
+    "project_id": "childfinderproject-d94fe",
+    "storage_bucket": "childfinderproject-d94fe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:949916560478:android:abc57d7bbf46c315f818cf",
+        "android_client_info": {
+          "package_name": "com.example.childfinderproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "949916560478-m8hkg9a6mkv5r2i7ov1u2rep949pbqr9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJUJr9bs6VU8HSiQ4cENGORycgdK4x8mQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "949916560478-m8hkg9a6mkv5r2i7ov1u2rep949pbqr9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
