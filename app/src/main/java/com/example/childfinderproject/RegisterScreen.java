@@ -11,6 +11,7 @@ public class RegisterScreen extends AppCompatActivity {
 
     Button btn_login,btn_register;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

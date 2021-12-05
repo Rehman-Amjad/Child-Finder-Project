@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.childfinderproject">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
@@ -14,39 +15,37 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ChildFinderProject">
-
+        android:theme="@style/Theme.ChildFinderProject"
+        tools:ignore="ExtraText">
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyD3EzFyOV98L26dadyOsFDy2Ml4YlJVAvw"/>
+            android:value="AIzaSyD3EzFyOV98L26dadyOsFDy2Ml4YlJVAvw" />
 
-        <activity android:name=".FinderLocationScreen">
-
-        </activity>
-        <activity android:name=".FinderUploadDataScreen" />
-        <activity android:name=".ParentLocationScreen" >
-
-        </activity>
-        <activity android:name=".ParentSearchDataScreen" />
-        <activity android:name=".UploadParentDataScreen">
-
-        </activity>
-        <activity android:name=".FinderMenuScreen" />
-        <activity android:name=".ParentMenuScreen" />
-        <activity android:name=".OTPScreen" />
-        <activity android:name=".SignupScreen" />
-        <activity android:name=".LoginScreen" />
-        <activity android:name=".ConfirmScreen" >
-
-        </activity>
-        <activity android:name=".RegisterScreen" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".ParentSearchScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+
+
+        <activity android:name=".FinderLocationScreen"></activity>
+        <activity android:name=".FinderUploadDataScreen" />
+        <activity android:name=".ParentLocationScreen"></activity>
+        <activity android:name=".ParentSearchDataScreen" />
+        <activity android:name=".UploadParentDataScreen"></activity>
+        <activity android:name=".FinderMenuScreen" />
+        <activity android:name=".ParentMenuScreen" />
+        <activity android:name=".OTPScreen" />
+        <activity android:name=".SignupScreen" />
+        <activity android:name=".LoginScreen" />
+        <activity android:name=".ConfirmScreen"></activity>
+        <activity android:name=".RegisterScreen" />
+        <activity android:name=".MainActivity">
+
         </activity>
 
         <meta-data

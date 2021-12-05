@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".ParentSearchScreen">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center"
+
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/carter_one"
+            android:gravity="center_horizontal"
+            android:padding="5dp"
+            android:text="Search Your Baby"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                android:gravity="center"
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Original Image"
+                        android:textSize="22sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="sans-serif-black"
+                        />
+                    <ImageView
+                        android:id="@+id/imageFromCam"
+                        android:paddingRight="10dp"
+                        android:layout_width="170dp"
+                        android:layout_height="170dp"
+                        android:src="@drawable/logo"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Test Image"
+                        android:textSize="22sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="sans-serif-black"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgFromDatabase"
+                        android:paddingRight="10dp"
+                        android:layout_width="170dp"
+                        android:layout_height="170dp"
+                        android:src="@drawable/logo"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_parent_search"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="Search"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="bottom|center"
+            android:textColor="@color/Golden"
+            android:backgroundTint="@color/black"
+
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

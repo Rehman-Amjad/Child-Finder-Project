@@ -85,7 +85,6 @@ public class UploadParentDataScreen extends AppCompatActivity {
                 parentcounter =String.valueOf(count);
                 counter.child("parentCounter").setValue(String.valueOf(parentcounter));
 
-                Toast.makeText(UploadParentDataScreen.this, ""+parentcounter, Toast.LENGTH_SHORT).show();
             }
 
             @Override
