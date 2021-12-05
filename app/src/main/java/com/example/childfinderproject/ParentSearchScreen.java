@@ -140,7 +140,7 @@ public class ParentSearchScreen extends AppCompatActivity {
                 bytes = Base64.decode(studimage, Base64.DEFAULT);
                 oribitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
                 imgFromDatabase.setImageBitmap(oribitmap);
-                  //  face_detector(oribitmap,"original");
+                //   face_detector(oribitmap,"original");
 
 
             }
@@ -234,7 +234,7 @@ public class ParentSearchScreen extends AppCompatActivity {
                 oribitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
                 imgFromDatabase.setImageBitmap(oribitmap);
 
-             // face_detector(oribitmap,"original");
+            //  face_detector(oribitmap,"original");
 
 
             }
@@ -254,7 +254,7 @@ public class ParentSearchScreen extends AppCompatActivity {
 
             DatabaseReference myRef = FirebaseDatabase.getInstance().getReference("parentUploadData");
 
-            myRef.child("1").addListenerForSingleValueEvent(new ValueEventListener() {
+            myRef.child("1").addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
 
