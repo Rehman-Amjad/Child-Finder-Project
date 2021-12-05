@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient1"
+    tools:context=".SignupScreen">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:background="@color/Golden"
+                android:gravity="center|start"
+                >
+
+                <ImageView
+                    android:id="@+id/img_back_signUp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/ic_arrow_back"
+                    />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Create Account"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="sans-serif-black"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="20dp"
+                >
+
+
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:src="@drawable/logo"
+                    />
+
+                <EditText
+                    android:id="@+id/ed_userFullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Name"
+                        android:padding="15dp"
+                     android:inputType="textPersonName"
+                    android:textColor="@color/Golden"
+                    android:paddingStart="10dp"
+                    android:textSize="15sp"
+                    android:textColorHint="#AEFFFFFF"
+                    android:drawableLeft="@drawable/nav_profile"
+                    android:drawablePadding="10dp"
+                    android:background="@drawable/button_background_black"
+                    android:paddingLeft="20dp" />
+
+
+                <EditText
+                    android:id="@+id/ed_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Username"
+                    android:textSize="15sp"
+                    android:inputType="textPersonName"
+                    android:padding="15dp"
+                    android:textColor="@color/Golden"
+                    android:paddingStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textColorHint="#AEFFFFFF"
+                    android:drawableLeft="@drawable/ic_user"
+                    android:drawablePadding="10dp"
+                    android:background="@drawable/button_background_black"
+                    android:paddingLeft="20dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <com.hbb20.CountryCodePicker
+                        android:id="@+id/ccp"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        app:ccp_arrowColor="@color/white"
+                        app:ccpDialog_textColor="@color/Golden"
+                        app:ccp_flagBorderColor="@color/Golden"
+                        app:ccp_showFlag="true"
+                        app:ccp_textSize="14sp"
+                        android:gravity="center"
+                        app:ccp_contentColor="#AEFFFFFF"
+                        android:paddingStart="2dp"
+                        app:ccp_defaultPhoneCode="92"
+                        app:ccpDialog_searchEditTextTint="@color/Golden"
+                        app:ccpDialog_backgroundColor="@color/black"
+                        android:background="@drawable/button_background_black"
+                        android:layout_marginTop="10dp"
+
+                        />
+
+
+                    <EditText
+                        android:id="@+id/ed_phoneNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:hint="Mobile No"
+                        android:textColor="@color/Golden"
+                        android:paddingStart="10dp"
+                        android:textSize="15sp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:textColorHint="#AEFFFFFF"
+                        android:drawableLeft="@drawable/ic_phone"
+                        android:drawablePadding="10dp"
+                        android:maxLength="15"
+                        android:inputType="number"
+                        android:background="@drawable/button_background_black"
+                        android:paddingLeft="20dp" />
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/ed_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Password"
+                    android:textColor="@color/Golden"
+                    android:paddingStart="10dp"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:textColorHint="#AEFFFFFF"
+                    android:drawableLeft="@drawable/ic_lock_focus"
+                    android:drawablePadding="10dp"
+                    android:maxLength="11"
+                    android:inputType="textPassword"
+                    android:background="@drawable/button_background_black"
+                    android:paddingLeft="20dp" />
+
+                <EditText
+                    android:id="@+id/ed_confirm_pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Confirm Password"
+                    android:textColor="@color/Golden"
+                    android:paddingStart="10dp"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:textColorHint="#AEFFFFFF"
+                    android:drawableLeft="@drawable/ic_lock_focus"
+                    android:drawablePadding="10dp"
+                    android:maxLength="10"
+                    android:inputType="textPassword"
+                    android:background="@drawable/button_background_black"
+                    android:paddingLeft="20dp" />
+
+                <Button
+                    android:id="@+id/btn_SignNext"
+                    android:layout_width="200dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/black"
+                    android:text="Next"
+                    android:textColor="@color/Golden"
+                    app:cornerRadius="10dp" />
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

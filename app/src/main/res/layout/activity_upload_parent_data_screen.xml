@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient1"
+    tools:context=".UploadParentDataScreen">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="@color/Golden"
+
+                >
+                <ImageView
+                    android:id="@+id/img_parent_menu_back"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/ic_arrow_back"
+                    />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Parent upload Data"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:background="@color/Golden"
+                    android:padding="10dp"
+                    android:fontFamily="sans-serif-black"
+                    />
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="30dp"
+                android:gravity="center|top"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="upload Child Image"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textAlignment="center"
+                    android:padding="10dp"
+                    android:fontFamily="sans-serif-black"
+                    />
+
+                <ImageView
+                    android:id="@+id/img_upload"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="12dp"
+                    android:src="@drawable/photo"
+                    />
+
+                <Button
+                    android:id="@+id/btn_parentUploadImage"
+                    android:layout_width="120dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginLeft="10dp"
+                    android:backgroundTint="@color/black"
+                    android:text="Uplaod"
+                    android:textColor="@color/Golden"
+                    app:cornerRadius="10dp" />
+
+                <EditText
+                    android:id="@+id/ed_parent_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Parent Name"
+                    android:padding="15dp"
+                    android:layout_marginTop="10dp"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/Golden"
+                    android:paddingStart="10dp"
+                    android:textSize="15sp"
+                    android:textColorHint="#AEFFFFFF"
+                    android:drawableLeft="@drawable/nav_profile"
+                    android:drawablePadding="10dp"
+                    android:background="@drawable/button_background_black"
+                    android:paddingLeft="20dp" />
+
+                <EditText
+                    android:id="@+id/ed_phoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Parent Mobile No e.g 3414178424"
+                    android:textColor="@color/Golden"
+                    android:paddingStart="10dp"
+                    android:textSize="15sp"
+                    android:layout_marginTop="10dp"
+                    android:textColorHint="#AEFFFFFF"
+                    android:drawableLeft="@drawable/ic_phone"
+                    android:drawablePadding="10dp"
+                    android:maxLength="15"
+                    android:inputType="number"
+                    android:background="@drawable/button_background_black"
+                    android:paddingLeft="20dp" />
+
+                <EditText
+                    android:id="@+id/ed_baby_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Baby Full Name"
+                    android:textColor="@color/Golden"
+                    android:paddingStart="10dp"
+                    android:textSize="15sp"
+                    android:layout_marginTop="10dp"
+                    android:textColorHint="#AEFFFFFF"
+                    android:drawableLeft="@drawable/ic_baby"
+                    android:drawablePadding="10dp"
+                    android:maxLength="15"
+                    android:inputType="textPersonName"
+                    android:background="@drawable/button_background_black"
+                    android:paddingLeft="20dp" />
+
+
+                <EditText
+                    android:id="@+id/ed_baby_Age"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Baby Age"
+                    android:textColor="@color/Golden"
+                    android:paddingStart="10dp"
+                    android:textSize="15sp"
+                    android:layout_marginTop="10dp"
+                    android:textColorHint="#AEFFFFFF"
+                    android:drawableLeft="@drawable/ic_baby_age"
+                    android:drawablePadding="10dp"
+                    android:maxLength="2"
+                    android:inputType="number"
+                    android:background="@drawable/button_background_black"
+                    android:paddingLeft="20dp" />
+
+
+                <EditText
+                    android:id="@+id/ed_parent_Address"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Home Address"
+                    android:textColor="@color/Golden"
+                    android:paddingStart="10dp"
+                    android:textSize="15sp"
+                    android:maxLines="4"
+                    android:layout_marginTop="10dp"
+                    android:textColorHint="#AEFFFFFF"
+                    android:drawableLeft="@drawable/ic__home"
+                    android:drawablePadding="10dp"
+                    android:inputType="textPostalAddress"
+                    android:background="@drawable/button_background_black"
+                    android:paddingLeft="20dp" />
+
+                <Button
+                    android:id="@+id/btn_ParentUploadNext"
+                    android:layout_width="120dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="@color/black"
+                    android:text="Next"
+                    android:visibility="invisible"
+                    android:textColor="@color/Golden"
+                    app:cornerRadius="10dp" />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</ScrollView>

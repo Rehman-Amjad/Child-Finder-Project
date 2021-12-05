@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradient1"
+    tools:context=".ConfirmScreen">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical"
+           >
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+
+               >
+               <ImageView
+                   android:layout_width="25dp"
+                   android:layout_height="25dp"
+                   android:layout_marginTop="15dp"
+                   android:layout_marginLeft="10dp"
+                   android:src="@drawable/ic_arrow_back"
+                   />
+
+               <TextView
+                   android:id="@+id/tv_top"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="Confirm your Identity"
+                   android:textColor="@color/black"
+                   android:background="@color/Golden"
+                   android:textAlignment="center"
+                   android:textSize="22sp"
+                   android:padding="10dp"
+                   android:fontFamily="sans-serif-black"
+                   android:gravity="center|top" />
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:orientation="vertical"
+               android:padding="30dp"
+
+               >
+
+
+               <TextView
+                   android:id="@+id/tv_top2"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="Parent"
+                   android:layout_marginTop="5dp"
+                   android:padding="10dp"
+                   android:textColor="@color/black"
+                   android:textAlignment="center"
+                   android:textSize="26sp"
+                   android:fontFamily="@font/archivo_black"
+                   android:gravity="center_horizontal" />
+
+               <ImageView
+                   android:id="@+id/con_img_parent"
+                   android:layout_width="match_parent"
+                   android:layout_height="250dp"
+                   android:src="@drawable/parent"
+                   />
+
+               <TextView
+                   android:id="@+id/con_tv_user"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="Find parent"
+                   android:layout_marginTop="10dp"
+                   android:padding="10dp"
+                   android:textColor="@color/black"
+                   android:textAlignment="center"
+                   android:textSize="26sp"
+                   android:fontFamily="@font/archivo_black"
+                   android:gravity="center_horizontal" />
+
+               <ImageView
+                   android:id="@+id/con_img_user"
+                   android:layout_width="match_parent"
+                   android:layout_height="180dp"
+                   android:src="@drawable/baby"
+                   />
+
+           </LinearLayout>
+
+
+       </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+
+
+</ScrollView>

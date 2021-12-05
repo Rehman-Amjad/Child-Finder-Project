@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient1"
+    tools:context=".ParentMenuScreen">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="@color/Golden"
+
+                >
+                <ImageView
+                    android:id="@+id/img_parent_menu_back"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/ic_arrow_back"
+                    />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Parent Menu"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:background="@color/Golden"
+                    android:padding="10dp"
+                    android:fontFamily="sans-serif-black"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+
+                >
+
+                <TextView
+                    android:id="@+id/tv_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Upload Baby Data and Find Your lost baby"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:background="@color/Golden"
+                    android:textAlignment="center"
+                    android:padding="10dp"
+                    android:fontFamily="sans-serif-black"
+                    />
+
+
+
+                    <TextView
+                        android:id="@+id/tv_top2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Upload Baby Data"
+                        android:layout_marginTop="5dp"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:textAlignment="center"
+                        android:textSize="26sp"
+                        android:fontFamily="@font/archivo_black"
+                        android:gravity="center_horizontal" />
+
+
+                    <ImageView
+                        android:id="@+id/img_parent_upData"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/upload"
+                        />
+
+                    <TextView
+                        android:id="@+id/con_tv_user"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Find Lost Baby"
+                        android:layout_marginTop="10dp"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:textAlignment="center"
+                        android:textSize="26sp"
+                        android:fontFamily="@font/archivo_black"
+                        android:gravity="center_horizontal" />
+
+                    <ImageView
+                        android:id="@+id/img_parent_searchBaby"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/search"
+                        />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</ScrollView>

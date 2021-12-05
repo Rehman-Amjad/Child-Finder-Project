@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".LoginScreen">
+
+
+    <ImageView
+        android:id="@+id/img_login_back"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/ic_arrow_back"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign in"
+        android:textSize="22sp"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-black"
+
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:paddingLeft="40dp"
+        android:gravity="center|top"
+        android:paddingRight="40dp"
+
+        >
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/gif"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/blackgif"
+            />
+
+        <EditText
+            android:id="@+id/ed_login_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            android:textSize="15sp"
+            android:inputType="textPersonName"
+            android:padding="15dp"
+            android:textColor="@color/Golden"
+            android:paddingStart="10dp"
+            android:layout_marginTop="10dp"
+            android:textColorHint="#AEFFFFFF"
+            android:drawableLeft="@drawable/ic_user"
+            android:drawablePadding="10dp"
+            android:background="@drawable/button_background_black"
+            android:paddingLeft="20dp" />
+
+        <EditText
+            android:id="@+id/ed_login_pass"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Password"
+            android:textColor="@color/Golden"
+            android:paddingStart="10dp"
+            android:textSize="15sp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:textColorHint="#AEFFFFFF"
+            android:drawableLeft="@drawable/ic_lock_focus"
+            android:drawablePadding="10dp"
+            android:maxLength="11"
+            android:inputType="textPassword"
+            android:background="@drawable/button_background_black"
+            android:paddingLeft="20dp" />
+
+
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="150dp"
+            android:layout_height="65dp"
+            android:layout_gravity="bottom|center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="@color/black"
+            android:text="Login"
+            android:textColor="@color/Golden"
+            app:cornerRadius="10dp" />
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
