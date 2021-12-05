@@ -166,7 +166,7 @@ public class FinderUploadDataScreen extends AppCompatActivity {
                 startActivity(intent);
                 finish();
 
-                Toast.makeText(FinderUploadDataScreen.this, "Data Uploaded Successful", Toast.LENGTH_SHORT).show();
+
 
 
 

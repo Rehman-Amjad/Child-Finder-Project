@@ -77,6 +77,7 @@ public class UploadParentDataScreen extends AppCompatActivity {
         counter.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+
                 parentcounter = snapshot.child("parentCounter").getValue(String.class);
 
                 count = Integer.parseInt(parentcounter);

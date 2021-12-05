@@ -1,36 +1,36 @@
 package com.example.childfinderproject.Model;
 
-public class ParentImage {
+public class FinderImage {
 
-    String parentId;
-    String parentImage;
+    String finderId;
+    String finderImage;
     String currentLatitude;
     String currentLongitude;
 
-    public ParentImage(String parentId, String parentImage, String currentLatitude, String currentLongitude) {
-        this.parentId = parentId;
-        this.parentImage = parentImage;
+    public FinderImage(String finderId, String finderImage, String currentLatitude, String currentLongitude) {
+        this.finderId = finderId;
+        this.finderImage = finderImage;
         this.currentLatitude = currentLatitude;
         this.currentLongitude = currentLongitude;
     }
 
-    public ParentImage() {
+    public FinderImage() {
     }
 
-    public String getParentId() {
-        return parentId;
+    public String getFinderId() {
+        return finderId;
     }
 
-    public void setParentId(String parentId) {
-        this.parentId = parentId;
+    public void setFinderId(String finderId) {
+        this.finderId = finderId;
     }
 
-    public String getParentImage() {
-        return parentImage;
+    public String getFinderImage() {
+        return finderImage;
     }
 
-    public void setParentImage(String parentImage) {
-        this.parentImage = parentImage;
+    public void setFinderImage(String finderImage) {
+        this.finderImage = finderImage;
     }
 
     public String getCurrentLatitude() {
