@@ -117,12 +117,14 @@ public class SignupScreen extends AppCompatActivity {
                                 return;
                             }
 
-                            if (TextUtils.isEmpty(userPhone) || userPhone.length() < 10)
+                           if (TextUtils.isEmpty(userPhone) || userPhone.length() < 10)
                             {
                                 ed_phoneNumber.setError("invalid Phone Number");
                                 ed_phoneNumber.requestFocus();
                                 return;
                             }
+
+
 
 
 
@@ -145,6 +147,7 @@ public class SignupScreen extends AppCompatActivity {
                                 User myuser = new User(userFullName,userName,userPhone,userPassword);
                                 String key=myRef.child(userName).getKey();
                                 myRef.child(key).setValue(myuser);
+
                                 Intent otpIntent = new Intent(SignupScreen.this,OTPScreen.class);
                                 otpIntent.putExtra("mobile",ccp.getFullNumberWithPlus().replace("",""));
                                 startActivity(otpIntent);

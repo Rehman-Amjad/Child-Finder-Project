@@ -42,6 +42,14 @@ public class FinderMenuScreen extends AppCompatActivity {
             }
         });
 
+        img_finder_searchBaby.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent backIntent = new Intent(FinderMenuScreen.this,FinderSearchDataScreen.class);
+                startActivity(backIntent);
+            }
+        });
+
 
 
     }

@@ -153,7 +153,7 @@ public class FinderUploadDataScreen extends AppCompatActivity {
 
                 DatabaseReference myRef= FirebaseDatabase.getInstance().getReference("FinderUploadData");
 
-                FinderUploadDataClass dataClass = new FinderUploadDataClass(FinderName,FinderMobileNumber,babyFullName,babyAge,FinderAddress,sImage2);
+                FinderUploadDataClass dataClass = new FinderUploadDataClass(FinderName,FinderMobileNumber,babyFullName,babyAge,FinderAddress,sImage2,parentcounter);
                 myRef.child(String.valueOf(count)).setValue(dataClass);
 
                 SharedPreferences preferences = getSharedPreferences("FINDERIMAGE",MODE_PRIVATE);

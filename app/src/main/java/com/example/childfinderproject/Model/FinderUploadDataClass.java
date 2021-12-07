@@ -8,15 +8,16 @@ public class FinderUploadDataClass {
     String babyAge;
     String FinderAddress;
     String FinderImg;
+    String finderID;
 
-
-    public FinderUploadDataClass(String finderName, String finderMobileNumber, String babyFullName, String babyAge, String finderAddress, String finderImg) {
+    public FinderUploadDataClass(String finderName, String finderMobileNumber, String babyFullName, String babyAge, String finderAddress, String finderImg, String finderID) {
         FinderName = finderName;
         FinderMobileNumber = finderMobileNumber;
         this.babyFullName = babyFullName;
         this.babyAge = babyAge;
         FinderAddress = finderAddress;
         FinderImg = finderImg;
+        this.finderID = finderID;
     }
 
     public FinderUploadDataClass() {
@@ -68,5 +69,13 @@ public class FinderUploadDataClass {
 
     public void setFinderImg(String finderImg) {
         FinderImg = finderImg;
+    }
+
+    public String getFinderID() {
+        return finderID;
+    }
+
+    public void setFinderID(String finderID) {
+        this.finderID = finderID;
     }
 }

@@ -69,7 +69,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Name"
-                        android:padding="15dp"
+                    android:padding="15dp"
                      android:inputType="textPersonName"
                     android:textColor="@color/Golden"
                     android:paddingStart="10dp"

@@ -44,7 +44,7 @@ public class ParentMenuScreen extends AppCompatActivity {
         img_parent_searchBaby.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent uploadIntent = new Intent(ParentMenuScreen.this,ParentSearchDataScreen.class);
+                Intent uploadIntent = new Intent(ParentMenuScreen.this,ParentSearchScreen.class);
                 startActivity(uploadIntent);
             }
         });

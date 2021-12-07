@@ -11,7 +11,7 @@ import android.widget.TextView;
 public class ConfirmScreen extends AppCompatActivity {
 
     TextView tv_top2,con_tv_user;
-    ImageView con_img_parent,con_img_user;
+    ImageView con_img_parent,con_img_user,logout;
 
 
     @Override
@@ -23,6 +23,7 @@ public class ConfirmScreen extends AppCompatActivity {
         con_tv_user=findViewById(R.id.con_tv_user);
         con_img_parent=findViewById(R.id.con_img_parent);
         con_img_user=findViewById(R.id.con_img_user);
+        logout=findViewById(R.id.logout);
 
 
         con_img_parent.setOnClickListener(new View.OnClickListener() {
@@ -43,7 +44,14 @@ public class ConfirmScreen extends AppCompatActivity {
         });
 
 
-
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent logIntent = new Intent(ConfirmScreen.this,LoginScreen.class);
+                startActivity(logIntent);
+                finish();
+            }
+        });
 
 
     }

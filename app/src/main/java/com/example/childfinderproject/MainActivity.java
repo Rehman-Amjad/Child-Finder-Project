@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
@@ -16,24 +17,24 @@ public class MainActivity extends AppCompatActivity {
 
 
     Animation topanim,bottomAnim;
-    TextView tv_sp1,tv_sp2;
-    ImageView img_sp1;
+    TextView tv_sp1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         tv_sp1=findViewById(R.id.tv_sp1);
-        tv_sp2=findViewById(R.id.tv_sp2);
-        img_sp1=findViewById(R.id.img_sp1);
+
+
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
 
 
         topanim = AnimationUtils.loadAnimation(this,R.anim.myanimation);
         bottomAnim = AnimationUtils.loadAnimation(this,R.anim.bottom_animation);
 
-        tv_sp1.startAnimation(topanim);
-        tv_sp2.startAnimation(bottomAnim);
-        img_sp1.startAnimation(bottomAnim);
+        tv_sp1.startAnimation(bottomAnim);
+
 
         Thread mythread=new Thread(new Runnable() {
             @Override
@@ -48,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
 
                     Intent intent=new Intent(MainActivity.this,RegisterScreen.class);
                     startActivity(intent);
-                    finish();
+                    finish();  //No return back close screen
                 }
 
 

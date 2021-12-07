@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient1"
+    tools:context=".Model.FinderShowInfoScreen">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:background="@color/Golden"
+                android:gravity="center|start"
+                >
+
+                <ImageView
+                    android:id="@+id/img_back_signUp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/ic_arrow_back"
+                    />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Parent Information"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="sans-serif-black"
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="20dp"
+                >
+
+                <ImageView
+                    android:id="@+id/img_current"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:src="@drawable/logo"
+                    android:layout_gravity="center"
+                    />
+
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:id="@+id/imgGallery"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:src="@drawable/photo"
+                    android:layout_marginLeft="20dp"
+                    android:layout_gravity="center"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginLeft="10dp"
+
+                >
+
+
+
+                <Button
+                    android:id="@+id/btn_Cam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:backgroundTint="@color/black"
+                    android:text="Camera"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/Golden"
+                    app:cornerRadius="10dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+
+                >
+
+                <Button
+                    android:id="@+id/btn_verify"
+                    android:layout_width="120dp"
+                    android:layout_height="50dp"
+                    android:backgroundTint="@color/black"
+                    android:text="Verify"
+                    android:layout_gravity="center"
+                    android:textColor="@color/Golden"
+                    app:cornerRadius="10dp" />
+
+                <Button
+                    android:id="@+id/btn_parent_face_match"
+                    android:layout_width="250dp"
+                    android:layout_height="50dp"
+                    android:backgroundTint="@color/black"
+                    android:text="Match Face"
+
+                    android:textColor="@color/Golden"
+                    app:cornerRadius="10dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="5dp"
+                    android:elevation="5dp"
+                    android:id="@+id/card"
+                    android:layout_row="2"
+                    android:layout_column="2"
+                    android:layout_margin="10dp"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@color/Golden"
+                        android:padding="10dp"
+                        >
+
+
+                        <TextView
+                            android:id="@+id/tv_finderName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Finder Name: "
+                            android:padding="5dp"
+                            android:textColor="@color/black"
+                            />
+
+                        <TextView
+                            android:id="@+id/tv_FinderAddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Finder Address: "
+                            android:padding="5dp"
+                            android:textColor="@color/black"
+                            />
+
+                        <TextView
+                            android:id="@+id/tv_FinderPhone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Finder Phone: "
+                            android:padding="5dp"
+                            android:textColor="@color/black"
+                            />
+                        <TextView
+                            android:id="@+id/tv_babyName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Baby Name: "
+                            android:padding="5dp"
+                            android:textColor="@color/black"
+                            />
+
+                        <TextView
+                            android:id="@+id/tv_babyAge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Baby Age: "
+                            android:padding="5dp"
+                            android:textColor="@color/black"
+                            />
+                        <Button
+                            android:id="@+id/btn_parent_set_loc"
+                            android:layout_width="250dp"
+                            android:layout_height="50dp"
+                            android:backgroundTint="@color/black"
+                            android:text="Set My Location"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/Golden"
+                            app:cornerRadius="10dp" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

@@ -163,7 +163,7 @@ public class UploadParentDataScreen extends AppCompatActivity {
 
 
                 DatabaseReference myRef= FirebaseDatabase.getInstance().getReference("parentUploadData");
-                ParentUploadDataClass dataClass = new ParentUploadDataClass(parentName,parentMobileNumber,babyFullName,babyAge,parentAddress,sImage2);
+                ParentUploadDataClass dataClass = new ParentUploadDataClass(parentName,parentMobileNumber,babyFullName,babyAge,parentAddress,sImage2,parentcounter);
                 myRef.child(String.valueOf(count)).setValue(dataClass);
 
                 SharedPreferences preferences = getSharedPreferences("PARENTIMAGE",MODE_PRIVATE);

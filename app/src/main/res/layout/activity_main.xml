@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/gradient1"
     tools:context=".MainActivity">
 
 
@@ -13,11 +12,21 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="350dp"
+            android:layout_height="match_parent"
             android:gravity="center"
             android:orientation="vertical"
 
             >
+
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/education_splash"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                app:lottie_rawRes="@raw/baby"
+                app:lottie_loop="true"
+                app:lottie_autoPlay="true" />
+
 
             <TextView
                 android:id="@+id/tv_sp1"
@@ -27,45 +36,13 @@
                 android:gravity="center_horizontal"
                 android:text="Child Finder"
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                android:textColor="@color/Golden"
                 android:textSize="49sp" />
 
 
         </LinearLayout>
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="bottom"
-        android:orientation="vertical"
-        android:gravity="bottom"
 
-        >
-
-
-        <TextView
-            android:id="@+id/tv_sp2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Get Register and Find your Children"
-            android:textSize="16sp"
-            android:textColor="@color/black"
-            android:fontFamily="sans-serif-black"
-            android:textAlignment="center"
-            android:layout_marginBottom="10dp"
-            android:gravity="center_horizontal" />
-
-        <ImageView
-            android:id="@+id/img_sp1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_marginTop="5dp"
-           android:layout_marginBottom="-10dp"
-            android:src="@drawable/spbackground"
-             />
-
-    </LinearLayout>
 
 </LinearLayout>

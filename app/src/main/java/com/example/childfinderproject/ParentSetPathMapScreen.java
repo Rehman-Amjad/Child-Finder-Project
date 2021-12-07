@@ -6,17 +6,17 @@ import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.content.ActivityNotFoundException;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.location.Location;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.childfinderproject.Model.ParentImage;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -33,16 +33,15 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class ParentLocationScreen extends AppCompatActivity {
+public class ParentSetPathMapScreen extends AppCompatActivity {
 
-    String ID;
-    String img;
     String lon;
     String lat;
+    String finder_id;
 
-    Button btn_map_uplaod;
+    String sDesLat,sDesLong;
 
-
+    Button btn_getParentDirection;
 
     //initilize variable
     SupportMapFragment supportMapFragment;
@@ -54,22 +53,41 @@ public class ParentLocationScreen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_parent_location_screen);
+        setContentView(R.layout.activity_parent_set_path_map_screen);
 
 
-        btn_map_uplaod=findViewById(R.id.btn_map_uplaod);
+        btn_getParentDirection=findViewById(R.id.btn_getParentDirection);
 
+        SharedPreferences preferences = getSharedPreferences("CUURENTDATA", Context.MODE_PRIVATE);
+        String babyImage = preferences.getString("BABY_IMAGE","");
+        finder_id = preferences.getString("FINDER_ID","");
 
+        DatabaseReference latRef = FirebaseDatabase.getInstance().getReference("FinderImage");
+
+        latRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                sDesLat = snapshot.child(finder_id).child("currentLatitude").getValue(String.class);
+                sDesLong = snapshot.child(finder_id).child("currentLongitude").getValue(String.class);
+                //  Toast.makeText(ParentShowInfoScreen.this, ""+sDesLat, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
         //Assign variable
         supportMapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.google_map);
 
         //initilize fused location
-        client = LocationServices.getFusedLocationProviderClient(this);
+        client = LocationServices.getFusedLocationProviderClient(ParentSetPathMapScreen.this);
 
         //check permission
-        if (ActivityCompat.checkSelfPermission(ParentLocationScreen.this,
+        if (ActivityCompat.checkSelfPermission(ParentSetPathMapScreen.this,
                 Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED){
 
             //when permission granted
@@ -81,47 +99,20 @@ public class ParentLocationScreen extends AppCompatActivity {
         {
             //when permission denied
             //requst permission
-            ActivityCompat.requestPermissions(ParentLocationScreen.this,
+            ActivityCompat.requestPermissions(ParentSetPathMapScreen.this,
                     new String[]{Manifest.permission.ACCESS_FINE_LOCATION},44);
         }
 
 
-        btn_map_uplaod.setOnClickListener(new View.OnClickListener() {
+        btn_getParentDirection.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                   DatabaseReference imgRef = FirebaseDatabase.getInstance().getReference("parentImage");
+                String sSource = lat+","+lon;
 
-             imgRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-
-                SharedPreferences preferences = getSharedPreferences("PARENTIMAGE",MODE_PRIVATE);
-                ID = preferences.getString("PARENTID","");
-                img = preferences.getString("IMAGE","");
-                ParentImage image = new ParentImage(ID,img,lat,lon);
-                imgRef.child(ID).setValue(image);
-
-                Toast.makeText(ParentLocationScreen.this, "Data Uploaded Successful", Toast.LENGTH_SHORT).show();
-
-                Intent backIntent = new Intent(ParentLocationScreen.this,ParentMenuScreen.class);
-                startActivity(backIntent);
-                finish();
-
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
+                String sDestination = sDesLat+","+sDesLong;
+                DisplayTrack(sSource,sDestination);
             }
         });
-
-            }
-        });
-
-
-
-
     }
 
     private void getCurrentLocation() {
@@ -156,8 +147,8 @@ public class ParentLocationScreen extends AppCompatActivity {
                             map = googleMap;
 
 
-                     //    Just show current location
-                         //initilize lat lag
+                            //    Just show current location
+                            //initilize lat lag
                             LatLng latLng = new LatLng(location.getLatitude(),
                                     location.getLongitude());
 
@@ -170,18 +161,10 @@ public class ParentLocationScreen extends AppCompatActivity {
                                     new LatLng(currentLat,currentLong),10));
 
                             //add marker on map
-                               googleMap.addMarker(options);
+                            googleMap.addMarker(options);
 
-                                lon=String.valueOf(currentLong);
-                                lat=String.valueOf(currentLat);
-
-
-
-
-
-
-
-
+                            lon=String.valueOf(currentLong);
+                            lat=String.valueOf(currentLat);
 
                         }
                     });
@@ -205,6 +188,40 @@ public class ParentLocationScreen extends AppCompatActivity {
         }
     }
 
+    private void DisplayTrack(String sSource, String sDestination)
+    {
+        //if the device dost not have a map installed, thne directed
 
+        try {
+            //when google map is installed
+            //initilzied uri
+            Uri uri = Uri.parse("https://www.google.co.in/maps/dir/" + sSource +"/"
+                    + sDestination);
 
+            //initilize intent action view
+            Intent intent = new Intent(Intent.ACTION_VIEW,uri);
+
+            //set package
+            intent.setPackage("com.google.android.apps.maps");
+
+            //set Flags
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+            startActivity(intent);
+
+        }
+        catch (ActivityNotFoundException e)
+        {
+            //when google map is not installed
+            //initilize uri
+            Uri uri = Uri.parse("https://play.google.com/store/apps/details?id=com.google.android.apps.maps");
+            // initlize intentt
+            Intent intent = new Intent(Intent.ACTION_VIEW,uri);
+            //set Flags
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+            startActivity(intent);
+
+        }
+    }
 }
