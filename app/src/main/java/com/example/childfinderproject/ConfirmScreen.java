@@ -2,6 +2,8 @@ package com.example.childfinderproject;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -47,9 +49,30 @@ public class ConfirmScreen extends AppCompatActivity {
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent logIntent = new Intent(ConfirmScreen.this,LoginScreen.class);
-                startActivity(logIntent);
-                finish();
+
+                AlertDialog.Builder builder=new AlertDialog.Builder(ConfirmScreen.this);
+                builder.setTitle("Are you sure...");
+                builder.setMessage("please confirm Yes/No.!");
+                builder.setCancelable(false);
+
+                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent logIntent = new Intent(ConfirmScreen.this,LoginScreen.class);
+                        startActivity(logIntent);
+                        finish();
+                    }
+                });
+
+                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+                AlertDialog myalter=builder.create();
+                myalter.show();
+
             }
         });
 

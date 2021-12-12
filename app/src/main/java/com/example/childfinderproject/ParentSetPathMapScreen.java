@@ -35,11 +35,11 @@ import com.google.firebase.database.ValueEventListener;
 
 public class ParentSetPathMapScreen extends AppCompatActivity {
 
-    String lon;
-    String lat;
-    String finder_id;
+    String lon=null;
+    String lat=null;
+    String finder_id=null;
 
-    String sDesLat,sDesLong;
+    String sDesLat=null,sDesLong=null;
 
     Button btn_getParentDirection;
 

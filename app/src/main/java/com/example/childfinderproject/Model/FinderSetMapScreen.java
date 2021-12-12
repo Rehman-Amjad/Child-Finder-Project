@@ -63,7 +63,7 @@ public class FinderSetMapScreen extends AppCompatActivity {
         String babyImage = preferences.getString("BABY_IMAGE","");
         finder_id = preferences.getString("PARENT_ID","");
 
-        DatabaseReference latRef = FirebaseDatabase.getInstance().getReference("FinderImage");
+        DatabaseReference latRef = FirebaseDatabase.getInstance().getReference("parentImage");
 
         latRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -71,7 +71,7 @@ public class FinderSetMapScreen extends AppCompatActivity {
 
                 sDesLat = snapshot.child(finder_id).child("currentLatitude").getValue(String.class);
                 sDesLong = snapshot.child(finder_id).child("currentLongitude").getValue(String.class);
-                //  Toast.makeText(ParentShowInfoScreen.this, ""+sDesLat, Toast.LENGTH_SHORT).show();
+               //  Toast.makeText(ParentShowInfoScreen.this, ""+sDesLat, Toast.LENGTH_SHORT).show();
             }
 
             @Override
