@@ -18,7 +18,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ChildFinderProject"
         tools:ignore="ExtraText">
-        <activity android:name=".Model.FinderSetMapScreen"></activity>
+        <activity android:name=".SimpleTest"></activity>
+        <activity android:name=".Model.FinderSetMapScreen" />
         <activity android:name=".ParentSetPathMapScreen" />
         <activity android:name=".Model.FinderShowInfoScreen" />
         <activity android:name=".ParentShowInfoScreen" />
@@ -39,11 +40,9 @@
         <activity android:name=".OTPScreen" />
         <activity android:name=".SignupScreen" />
         <activity android:name=".LoginScreen" />
-        <activity android:name=".ConfirmScreen">
-
-        </activity>
+        <activity android:name=".ConfirmScreen"></activity>
         <activity android:name=".RegisterScreen" />
-        <activity android:name=".MainActivity" >
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

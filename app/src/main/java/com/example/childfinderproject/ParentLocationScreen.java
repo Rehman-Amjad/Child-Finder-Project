@@ -43,7 +43,6 @@ public class ParentLocationScreen extends AppCompatActivity {
     Button btn_map_uplaod;
 
 
-
     //initilize variable
     SupportMapFragment supportMapFragment;
     FusedLocationProviderClient client;

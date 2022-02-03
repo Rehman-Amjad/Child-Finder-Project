@@ -39,7 +39,8 @@ public class ParentSetPathMapScreen extends AppCompatActivity {
     String lat=null;
     String finder_id=null;
 
-    String sDesLat=null,sDesLong=null;
+    String sDesLat;
+      String  sDesLong;
 
     Button btn_getParentDirection;
 
@@ -55,6 +56,7 @@ public class ParentSetPathMapScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_parent_set_path_map_screen);
 
+        getCurrentLocation();
 
         btn_getParentDirection=findViewById(R.id.btn_getParentDirection);
 
