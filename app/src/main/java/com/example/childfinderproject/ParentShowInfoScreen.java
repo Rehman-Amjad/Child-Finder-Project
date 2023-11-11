@@ -279,11 +279,6 @@ public class ParentShowInfoScreen extends AppCompatActivity {
             }
         });
 
-
-
-
-
-
     }
 
     private void retriveImae()

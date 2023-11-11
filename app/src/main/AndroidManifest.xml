@@ -3,12 +3,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.childfinderproject">
 
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
     <application
         android:allowBackup="true"
@@ -18,31 +25,55 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ChildFinderProject"
         tools:ignore="ExtraText">
-        <activity android:name=".SimpleTest"></activity>
-        <activity android:name=".Model.FinderSetMapScreen" />
-        <activity android:name=".ParentSetPathMapScreen" />
-        <activity android:name=".Model.FinderShowInfoScreen" />
-        <activity android:name=".ParentShowInfoScreen" />
-        <activity android:name=".FinderSearchDataScreen" />
+
+        <activity
+            android:name=".DemoActivity"
+            android:exported="false" />
+        <activity android:name=".SimpleTest"
+            android:exported="false"/>
+        <activity android:name=".Model.FinderSetMapScreen"
+            android:exported="false"/>
+        <activity android:name=".ParentSetPathMapScreen"
+            android:exported="false"/>
+        <activity android:name=".Model.FinderShowInfoScreen"
+            android:exported="false"/>
+        <activity android:name=".ParentShowInfoScreen"
+            android:exported="false"/>
+        <activity android:name=".FinderSearchDataScreen"
+            android:exported="false"/>
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyD3EzFyOV98L26dadyOsFDy2Ml4YlJVAvw" />
 
-        <activity android:name=".ParentSearchScreen" />
-        <activity android:name=".FinderLocationScreen" />
-        <activity android:name=".FinderUploadDataScreen" />
-        <activity android:name=".ParentLocationScreen" />
-        <activity android:name=".ParentSearchDataScreen" />
-        <activity android:name=".UploadParentDataScreen" />
-        <activity android:name=".FinderMenuScreen" />
-        <activity android:name=".ParentMenuScreen" />
-        <activity android:name=".OTPScreen" />
-        <activity android:name=".SignupScreen" />
-        <activity android:name=".LoginScreen" />
-        <activity android:name=".ConfirmScreen"></activity>
-        <activity android:name=".RegisterScreen" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".ParentSearchScreen"
+            android:exported="false"/>
+        <activity android:name=".FinderLocationScreen"
+            android:exported="false"/>
+        <activity android:name=".FinderUploadDataScreen"
+            android:exported="false"/>
+        <activity android:name=".ParentLocationScreen"
+            android:exported="false"/>
+        <activity android:name=".ParentSearchDataScreen"
+            android:exported="false"/>
+        <activity android:name=".UploadParentDataScreen"
+            android:exported="false"/>
+        <activity android:name=".FinderMenuScreen"
+            android:exported="false"/>
+        <activity android:name=".ParentMenuScreen"
+            android:exported="false"/>
+        <activity android:name=".OTPScreen"
+            android:exported="false"/>
+        <activity android:name=".SignupScreen"
+            android:exported="false"/>
+        <activity android:name=".LoginScreen"
+            android:exported="false"/>
+        <activity android:name=".ConfirmScreen"
+            android:exported="false"/>
+        <activity android:name=".RegisterScreen"
+            android:exported="false"/>
+        <activity android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

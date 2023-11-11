@@ -119,8 +119,6 @@ public class ParentLocationScreen extends AppCompatActivity {
         });
 
 
-
-
     }
 
     private void getCurrentLocation() {

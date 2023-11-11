@@ -10,7 +10,6 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
         >
 
         <LinearLayout
@@ -63,9 +62,6 @@
                     android:src="@drawable/logo"
                     android:layout_gravity="center"
                     />
-
-
-
 
 
             </LinearLayout>
@@ -136,7 +132,6 @@
                     android:layout_height="50dp"
                     android:backgroundTint="@color/black"
                     android:text="Match Face"
-
                     android:textColor="@color/Golden"
                     app:cornerRadius="10dp" />
 

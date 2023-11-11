@@ -15,7 +15,6 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:orientation="vertical"
-
             >
 
 
@@ -34,10 +33,11 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/bevan"
                 android:gravity="center_horizontal"
-                android:text="Child Finder"
+                android:text="Child Rescue Missing Children Investigation using Mobile App"
                 android:textAlignment="center"
                 android:textColor="@color/Golden"
-                android:textSize="49sp" />
+                android:padding="20dp"
+                android:textSize="22sp" />
 
 
         </LinearLayout>

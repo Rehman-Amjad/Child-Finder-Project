@@ -166,10 +166,6 @@ public class FinderUploadDataScreen extends AppCompatActivity {
                 startActivity(intent);
                 finish();
 
-
-
-
-
             }
         });
 

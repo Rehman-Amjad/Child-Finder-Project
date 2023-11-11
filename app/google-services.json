@@ -1,36 +1,26 @@
 {
   "project_info": {
-    "project_number": "949916560478",
-    "project_id": "childfinderproject-d94fe",
-    "storage_bucket": "childfinderproject-d94fe.appspot.com"
+    "project_number": "302183606125",
+    "project_id": "child-finder-47a8f",
+    "storage_bucket": "child-finder-47a8f.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:949916560478:android:abc57d7bbf46c315f818cf",
+        "mobilesdk_app_id": "1:302183606125:android:d190d2611e55d3b408dc64",
         "android_client_info": {
           "package_name": "com.example.childfinderproject"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "949916560478-m8hkg9a6mkv5r2i7ov1u2rep949pbqr9.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBJUJr9bs6VU8HSiQ4cENGORycgdK4x8mQ"
+          "current_key": "AIzaSyBYBMlllKGT5JLYqjjRABKHYHp9asWwnKs"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "949916560478-m8hkg9a6mkv5r2i7ov1u2rep949pbqr9.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }

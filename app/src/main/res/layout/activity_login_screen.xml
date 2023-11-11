@@ -20,7 +20,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sign in"
+        android:text="sign up account"
         android:textSize="22sp"
         android:padding="10dp"
         android:textColor="@color/black"

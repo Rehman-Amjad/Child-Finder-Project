@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient1"
+    android:background="@color/Golden"
     tools:context=".UploadParentDataScreen">
 
     <RelativeLayout
@@ -12,8 +12,6 @@
         android:layout_height="match_parent"
 
         >
-
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -65,7 +63,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="upload Child Image"
+                    android:text="Upload Child Image"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:textAlignment="center"
@@ -88,9 +86,10 @@
                     android:layout_gravity="bottom|center"
                     android:layout_marginLeft="10dp"
                     android:backgroundTint="@color/black"
-                    android:text="Uplaod"
-                    android:textColor="@color/Golden"
+                    android:text="Upload"
+                    android:textColor="@color/white"
                     app:cornerRadius="10dp" />
+
 
                 <EditText
                     android:id="@+id/ed_parent_name"

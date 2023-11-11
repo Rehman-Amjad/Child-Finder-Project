@@ -40,7 +40,7 @@ public class ParentSetPathMapScreen extends AppCompatActivity {
     String finder_id=null;
 
     String sDesLat;
-      String  sDesLong;
+    String  sDesLong;
 
     Button btn_getParentDirection;
 
@@ -51,35 +51,36 @@ public class ParentSetPathMapScreen extends AppCompatActivity {
     double currentLat = 0, currentLong = 0;
     GoogleMap map;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_parent_set_path_map_screen);
 
-        getCurrentLocation();
+
 
         btn_getParentDirection=findViewById(R.id.btn_getParentDirection);
 
-        SharedPreferences preferences = getSharedPreferences("CUURENTDATA", Context.MODE_PRIVATE);
-        String babyImage = preferences.getString("BABY_IMAGE","");
-        finder_id = preferences.getString("FINDER_ID","");
-
-        DatabaseReference latRef = FirebaseDatabase.getInstance().getReference("FinderImage");
-
-        latRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-
-                sDesLat = snapshot.child(finder_id).child("currentLatitude").getValue(String.class);
-                sDesLong = snapshot.child(finder_id).child("currentLongitude").getValue(String.class);
-                //  Toast.makeText(ParentShowInfoScreen.this, ""+sDesLat, Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
+//        SharedPreferences preferences = getSharedPreferences("CUURENTDATA", Context.MODE_PRIVATE);
+//        String babyImage = preferences.getString("BABY_IMAGE","");
+//        finder_id = preferences.getString("FINDER_ID","");
+//
+//        DatabaseReference latRef = FirebaseDatabase.getInstance().getReference("FinderImage");
+//
+//        latRef.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot snapshot) {
+//
+//                sDesLat = snapshot.child(finder_id).child("currentLatitude").getValue(String.class);
+//                sDesLong = snapshot.child(finder_id).child("currentLongitude").getValue(String.class);
+//                //  Toast.makeText(ParentShowInfoScreen.this, ""+sDesLat, Toast.LENGTH_SHORT).show();
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError error) {
+//
+//            }
+//        });
 
         //Assign variable
         supportMapFragment = (SupportMapFragment) getSupportFragmentManager()
@@ -105,13 +106,14 @@ public class ParentSetPathMapScreen extends AppCompatActivity {
                     new String[]{Manifest.permission.ACCESS_FINE_LOCATION},44);
         }
 
+        getCurrentLocation();
 
         btn_getParentDirection.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String sSource = lat+","+lon;
 
-                String sDestination = sDesLat+","+sDesLong;
+                String sDestination = "31.41276"+","+"73.11557";
                 DisplayTrack(sSource,sDestination);
             }
         });
@@ -130,14 +132,12 @@ public class ParentSetPathMapScreen extends AppCompatActivity {
                 //when Success
                 if (location != null)
                 {
-
                     //when location in not equal to null
                     //Get current Latitude
                     currentLat = location.getLatitude();
 
                     //get Current Longitude
                     currentLong = location.getLongitude();
-
 
                     //synMap
                     supportMapFragment.getMapAsync(new OnMapReadyCallback() {

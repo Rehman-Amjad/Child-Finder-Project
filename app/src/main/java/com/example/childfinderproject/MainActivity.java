@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 finally {
 
-                    Intent intent=new Intent(MainActivity.this,RegisterScreen.class);
+                    Intent intent=new Intent(MainActivity.this,LoginScreen.class);
                     startActivity(intent);
                     finish();  //No return back close screen
                 }

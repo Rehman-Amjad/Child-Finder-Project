@@ -14,6 +14,8 @@ import android.widget.Toast;
 
 import com.example.childfinderproject.Model.User;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -26,12 +28,28 @@ public class LoginScreen extends AppCompatActivity {
     EditText ed_login_user,ed_login_pass;
     Button btn_login;
     ImageView img_login_back;
+    FirebaseAuth mAuth;
+    FirebaseUser currentUser;
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        currentUser  = mAuth.getCurrentUser();
+        if (currentUser!=null)
+        {
+            startActivity(new Intent(LoginScreen.this,ConfirmScreen.class));
+            finish();
+        }
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_screen);
+
+        mAuth = FirebaseAuth.getInstance();
 
         ed_login_user=findViewById(R.id.ed_login_user);
         ed_login_pass=findViewById(R.id.ed_login_pass);
