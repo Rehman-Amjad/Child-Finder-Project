@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "302183606125",
-    "project_id": "child-finder-47a8f",
-    "storage_bucket": "child-finder-47a8f.appspot.com"
+    "project_number": "741044294997",
+    "project_id": "child-rescue-41203",
+    "storage_bucket": "child-rescue-41203.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:302183606125:android:d190d2611e55d3b408dc64",
+        "mobilesdk_app_id": "1:741044294997:android:de647ac8180cadb8838bdc",
         "android_client_info": {
           "package_name": "com.example.childfinderproject"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBYBMlllKGT5JLYqjjRABKHYHp9asWwnKs"
+          "current_key": "AIzaSyBv6s334prWqoEPHPEZdY0vAd029yib9sU"
         }
       ],
       "services": {
